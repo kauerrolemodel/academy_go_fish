@@ -2,11 +2,15 @@
   box-sizing: border-box;
 }
 
+html{
+  background-color: #DDDDDD;
+}
+
 body{
   width:960px;
   margin:15px auto;
   font-family: Arial, "MS Trebuchet", sans-serif;
-  background-color: #DDDDDD;
+  background-color: #DDDDFF;
   color: #333311;
 }
 p{
@@ -28,12 +32,13 @@ footer#page_footer{
   display: block; 
 }  
 
-#main {
-  margin-right: 30%;
+.main-content {
   float: left;
   padding: 1em;
+  width: 70%;
+  background-color: #EEEEFF;
 }
-#page_sidebar {
+.page-sidebar {
   float: right;
   width: 30%;
   padding: 1em;
@@ -48,19 +53,6 @@ header#page_header nav ul li, footer#page_footer nav ul li{
   padding:0;
   margin: 0 20px 0 0;
   display:inline;
-}
-
-section#player_info{
-  float: left;
-  width: 64%;
-  background-color: #EEEEFF;
-}
-
-section#game_info{
-  display: block;
-  background-color: #DDDDFF;
-  width: 100%;
-  height: 100%;
 }
 
 section#player_info section{
