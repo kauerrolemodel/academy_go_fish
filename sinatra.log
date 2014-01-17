@@ -1,0 +1,7 @@
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4567, CTRL+C to stop
+>> Stopping ...
+127.0.0.1 - - [13/Jan/2014 11:40:38] "GET / HTTP/1.1" 302 - 0.0171
+127.0.0.1 - - [13/Jan/2014 11:40:38] "GET /login HTTP/1.1" 200 991 0.0375
+127.0.0.1 - - [13/Jan/2014 11:40:38] "GET /stylesheets/style.css HTTP/1.1" 304 - 0.0013

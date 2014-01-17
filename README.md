@@ -1,4 +1,3 @@
-academy_go_fish
-===============
-
-This is just a place I am experimenting with some things for the Academy related to GoFish
+card-game-go-fish
+=================
+Go Fish card game project for the RoleModel Software Craftsmanship Academy

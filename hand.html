@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Go Fish</title>
+  </HEAD>
+  <BODY>
+    <HEADER id="page_header">
+      <H1>Bob against Fred, Sam, and Joe</H1>
+      <P><time datetime="2014-01-06T@11:00">2014-01-06 at 11:00</time></P>
+      <NAV>
+        <UL>
+          <LI><a href="/">Home</a></LI>
+          <LI><a href="about">About</a></LI>
+          <LI><a href="terms.html">Terms of Service</a></LI>
+          <LI><a href="privacy.html">Privacy</a></LI>
+        </UL>
+      </NAV>
+    </HEADER>
+    <SECTION id="player_info" class="main-content">
+      <SECTION id="player_hand">
+        <H2>Cards</H2>
+        <UL id="cards_list">
+          <LI><img src="images/cards/h5.png" alt="5-of-hearts"></LI>
+          <LI><img src="images/cards/d6.png" alt="6-of-diamonds"></LI>
+          <LI><img src="images/cards/c9.png" alt="9-of-clubs"></LI>
+          <LI><img src="images/cards/dk.png" alt="King-of-diamonds"></LI>
+          <LI><img src="images/cards/hk.png" alt="King-of-hearts"></LI>
+        </UL>    
+      </SECTION>
+      <SECTION id="player_books">
+        <H2>Books</H2>
+        <UL id="books_list">
+          <LI>
+            <UL class="book">
+              <LI><img src="images/cards/h7.png" alt="7-of-hearts"></LI>
+              <LI><img src="images/cards/d7.png" alt="7-of-diamonds"></LI>
+              <LI><img src="images/cards/c7.png" alt="7-of-clubs"></LI>
+              <LI><img src="images/cards/s7.png" alt="7-of-spades"</LI>
+            </UL>    
+          </LI>
+        </UL>      
+      </SECTION>
+      <SECTION id="your_turn">
+        <form method="post" action="player_turn/1">
+            <fieldset id="ask"> 
+                <legend>Ask</legend> 
+                <ol>
+                    <li>
+                        <label for="opponent">Opponent</label>
+                        <select name="opponent">
+                            <option value="1">Fred</option>
+                            <option value="3">Sam</option>
+                            <option value="4">Joe</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="rank">Card</label>
+                        <select name="rank">
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="9">9</option>
+                            <option value="K">King</option>
+                        </select>                      
+                    </li>
+                    <li>
+                        <input type="submit" value="Submit">
+                    </li> 
+                </ol>
+            </fieldset>
+        </form>
+      </SECTION>
+    </SECTION>
+    <SECTION id="game_info" class="page-sidebar">
+      <SECTION id="last_turn">
+        <H2>Last Turn</H2>
+        <P>
+          Fred asked Joe for Kings, had to fish and didn't get the King.
+        </P>
+      </SECTION>
+      <SECTION id="opponent_hands">
+        <H2>Opponents</H2>
+        <UL id="opponents_list">
+          <LI>
+            <label>Fred</label>
+            <span class="opponent_cards">3</span>
+          </LI>
+          <LI>
+            <label>Sam</label>
+            <span class="opponent_cards">8</span>
+          </LI>
+          <LI>
+            <label>Joe</label>
+            <span class="opponent_cards">2</span>
+            <span class="opponent_books">2</span>
+            <ul class="opponent_book_ranks">
+              <li>3</li>
+              <li>Queen</li>
+            </ul>
+          </LI>
+        </UL>    
+      </SECTION>
+    </SECTION>
+    <FOOTER id="page_footer">
+      <P>&copy; 2014 RoleModel Software, Inc.</P>
+      <NAV>
+        <UL>
+          <LI><a href="">Home</a></LI>
+          <LI><a href="about">About</a></LI>
+          <LI><a href="terms.html">Terms of Service</a></LI>
+          <LI><a href="privacy.html">Privacy</a></LI>
+        </UL>
+      </NAV>
+    </FOOTER>
+  </BODY>
+</HTML>

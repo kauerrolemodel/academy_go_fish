@@ -1,0 +1,63 @@
+section#player_info.main-content
+  section#player_hand
+    h2 #{@user_name}
+    h2 Cards
+    ul.cards_list
+      - @game.hand(1).cards.each do |card|
+        li data-rank="#{card.rank}" data-suit="#{card.suit}" ="#{card.to_s}" 
+  
+  section#player_books 
+    h2 Books
+    ul.books_list
+      li
+        ul.book
+          li
+            img src="images/cards/h7.png" alt="7-of-hearts" 
+          li
+            img src="images/cards/d7.png" alt="7-of-diamonds" 
+          li
+            img src="images/cards/c7.png" alt="7-of-clubs" 
+          li
+            img src="images/cards/s7.png" alt="7-of-spades"
+  section#your_turn
+    form method="post" action="player_turn/1" 
+        fieldset#ask
+            legend Ask
+            ol
+                li 
+                    label for="opponent" Opponent
+                    select name="opponent"
+                        option value="1" Fred
+                        option value="3" Sam
+                        option value="4" Joe
+                li 
+                    label for="rank" Card
+                    select name="rank" 
+                        option value="5" 5
+                        option value="6" 6
+                        option value="9" 9
+                        option value="K" King
+                li 
+                    input type="submit" value="Submit" 
+
+section#game_info.page-sidebar
+  section#last_turn
+    h2 Last Turn
+    p Fred asked Joe for Kings, had to fish and didn't get the King.
+  
+  section#opponent_hands 
+    h2 Opponents
+    ul.opponents_list
+      li
+        label Fred
+        span.opponent_cards 3
+      li
+        label Sam
+        span.opponent_cards 8
+      li
+        label Joe
+        span.opponent_cards 2
+        span.opponent_books 2
+        ul.opponent_book_ranks
+          li 3
+          li Queen
